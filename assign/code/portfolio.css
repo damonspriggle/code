@@ -2,7 +2,11 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
 
 header h1 {
     font-weight: bold;
@@ -21,13 +25,37 @@ header h1 {
   }
 
 
-
-
+  .some-class {
+    text-shadow: 5px 10px 15px black;
+    box-shadow: 5px 10px 15px black;
+  }
+/* default state */
+button {
+    background: white;
+  }
+  
+  /* mouse is hovering over button */
+  button:hover {
+    background: red;
+  }
+  
+  /* button is in focus because it was the most recently clicked element on the page */
+  button:focus {
+    background: green;
+  }
+  
+  /* user is actively pressing the cursor down on the button */
+  button:active {
+    background: blue;
+  }
 
 
 
 
   @media screen and (max-width: 980px) {
+    header {
+        position: relative;
+    }
     header h1 a {
       color: tomato;
     }
